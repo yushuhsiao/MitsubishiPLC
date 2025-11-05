@@ -3,3 +3,7 @@
 *.csproj.user
 bin/
 obj/
+# NuGet
+*.nupkg
+# 保留預先建置的 Interop 套件
+!MitsubishiPLC.Interop.*.nupkg

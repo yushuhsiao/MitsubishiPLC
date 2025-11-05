@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<RootNamespace>Mitsubishi.PLC</RootNamespace>
+		<Authors>Yushu Hsiao</Authors>
+		<Description>Mitsubishi PLC COM Interop Libraries</Description>
+		<Version>2025.11.05</Version>
+		<IncludeBuildOutput>false</IncludeBuildOutput><!-- 不產生 DLL -->
+		<UseWindowsForms>true</UseWindowsForms>
+	</PropertyGroup>
+	<Choose>
+		<When Condition=" '$(Configuration)'=='Release' ">
+			<PropertyGroup>
+				<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+				<PackageOutputPath>..\</PackageOutputPath>
+			</PropertyGroup>
+		</When>
+	</Choose>
+
+	<ItemGroup>
+		<Content Include="lib\Interop.ACTMULTILib.dll">
+			<PackagePath>lib\$(TargetFramework)</PackagePath>
+			<Pack>true</Pack>
+		</Content>
+		<Content Include="lib\Interop.ActUtlType64Lib.dll">
+			<PackagePath>lib\$(TargetFramework)</PackagePath>
+			<Pack>true</Pack>
+		</Content>
+	</ItemGroup>
+
+</Project>

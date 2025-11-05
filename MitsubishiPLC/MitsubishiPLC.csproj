@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<RootNamespace>Mitsubishi.PLC</RootNamespace>
+		<Authors>Yushu Hsiao</Authors>
+		<Description>Mitsubishi PLC Communication Wrapper for .NET</Description>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.3" />
+	  <PackageReference Include="MitsubishiPLC.Interop" Version="2025.11.5" />
+	</ItemGroup>
+
+</Project>
